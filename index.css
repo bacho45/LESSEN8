@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+}
+h1{
+    text-shadow: 2px 2px 3px black;/*ტექსტის ჩრდილები*/
+}
+
+.box1{
+    background-color: red;
+    
+}
+
+.box1:hover{
+    animation-name: colorchanger;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 2s;
+}
+
+.box2{
+    background-color: green;
+    animation: colorchanger1 10s infinite ease-in-out;
+    
+}
+
+.box2:hover{
+    
+}
+
+.box3{
+    background-color: blue;
+    /*transform: translate(200px,50px);*/
+    transition: 3s;
+    transform: translatex(200px);
+    
+
+}
+
+.box3:hover{
+    /*transform: translate(100px,-100px); მარრჯვნივ-მარცხნივ,ზემოთ-ქვემოთ*/
+    /*transform: scale(2,0.5); გადიდება-დაპატარავება*/
+    /*transform-origin: left top; ადგილიდან მარჯვნივ ან მარცხნივ*/
+    /*transform: rotatez(45deg); გადატრიალება*/
+    /*transform: translate(200px, 50px) skewy(10deg) rotate(45deg);*/
+    background-color: yellow;
+    border-radius: 8px;
+    /*display: none; გაქრობა*/
+    /*visibility: hidden; რაღაც დროის მერე გაქრობა*/
+    box-shadow: 15px 15px 15px black; /*ჩრდილი*/
+    transform: translateX(200px) rotate(90deg);
+    transform-origin: 0px 0px;
+
+}
+
+.kamatelibox{
+    width: 200px;
+    height: 200px;
+    background: url(./PNG_transparency_demonstration_1.png) no-repeat;
+    background-size: contain;
+    transform: translate(200px,-200px);
+    filter: drop-shadow(5px 5px 15px black); /*ნახატის ჩრდილი*/
+    /*box-shadow: 5px 5px 15px black; ჩარჩოს ჩრდილი*/ 
+
+}
+
+
+@keyframes colorchanger{
+    from{
+        background-color: aquamarine;
+
+    }
+    to{
+        background-color: black;
+
+    }
+}
+
+@keyframes colorchanger1{
+    0%{
+        
+
+    }
+    25%{
+        
+        transform: rotatex(45deg) translateX(300px);
+
+    }
+    50%{
+        background-color: brown;
+        transform: translateX(300px) scale(2);
+        
+
+    }
+    75%{
+        background-color: red;
+        transform: translateX(300px) skew(15deg, 15deg);
+
+    }
+    100%{
+        /*transform: rotate(45deg);*/
+
+    }
+}
